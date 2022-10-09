@@ -132,6 +132,7 @@ class SurahIndexScreen extends StatelessWidget {
                   ),
                   if (chapterCubit.chapters.isNotEmpty)
                     Container(
+
                         margin: EdgeInsets.only(
                           top: MediaQuery.of(context).size.height * 0.22,
                         ),

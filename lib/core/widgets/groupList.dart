@@ -396,6 +396,7 @@ class _GroupedListViewState<T, E> extends State<GroupedListView<T, E>> {
                         "${value.text}"+ "(${value.numberInSurah.toString()})";
                     var x = text;
                     text = '';
+
                     return Column(
                       children: [
                         WidgetAnimator(
