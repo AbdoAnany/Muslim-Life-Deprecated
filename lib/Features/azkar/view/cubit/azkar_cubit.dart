@@ -3,7 +3,7 @@
 import 'dart:convert';
 import 'dart:core';
 
-import 'package:azkar/Features/model/azkarModel.dart';
+import 'package:azkar/Features/azkar/date/model/azkarModel.dart';
 import 'package:bloc/bloc.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +11,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 
-import 'azkar_state.dart';
+part  'azkar_state.dart';
 
 class Model {
   String category;
@@ -42,20 +42,20 @@ class AzkarCubit extends Cubit<AzkarState> {
   var currentPosition;
   final CarouselController carouselController = CarouselController();
 
-  Future<void> azkartapped(AzkarCategory Category) async {
+  Future<void> azkarTapped(AzkarCategory Category) async {
     try {
       Azkarlist = [];
       textState = 'تحميل الاذكار';
       emit(AzkarLoading());
       Azkarlist =Category.azkarList;
 
-      await onscroll(0);
+      await onScroll(0);
       textState = 'تم تحميل الاذكار';
       emit(AzkarSuccess());
     } catch (ex) {}
   }
 
-  Future<void> onscroll(index) async {
+  Future<void> onScroll(index) async {
     emit(ScrollAzkar());
     await Future.delayed(Duration(milliseconds: 600));
     if (Azkarlist[index].count.isNotEmpty) {

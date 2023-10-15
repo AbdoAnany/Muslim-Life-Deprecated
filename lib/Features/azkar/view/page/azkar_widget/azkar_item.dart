@@ -3,8 +3,9 @@
 //@dart=2.9
 import 'dart:ui';
 
-import 'package:azkar/Features/bloc/Azkar_cubit/azkar_cubit.dart';
-import 'package:azkar/Features/model/azkarModel.dart';
+import 'package:azkar/Features/azkar/view/cubit/azkar_cubit.dart';
+
+import 'package:azkar/Features/azkar/date/model/azkarModel.dart';
 import 'package:azkar/core/animations/bottom_animation.dart';
 import 'package:azkar/core/providers/app_provider.dart';
 import 'package:azkar/core/shared/colors.dart';
@@ -26,7 +27,7 @@ class AzkarItem extends StatelessWidget{
   return WidgetAnimator(
     child: GestureDetector(
       onTap: () async {
-        AzkarCubit.get(context).azkartapped(item);
+        AzkarCubit.get(context).azkarTapped(item);
         showDialog(
             context: context,
             builder: (BuildContext context) {

@@ -1,6 +1,6 @@
 // @dart=2.9
 
-import 'package:azkar/Features/bloc/Azkar_cubit/azkar_cubit.dart';
+import 'package:azkar/Features/azkar/view/cubit/azkar_cubit.dart';
 import 'package:azkar/Features/bloc/Qibla_cubit/qibla_cubit.dart';
 import 'package:azkar/Features/bloc/Sibha_cubit/misbaha_cubit.dart';
 import 'package:azkar/Features/bloc/bookmarks/cubit.dart';
@@ -20,13 +20,14 @@ import 'Features/bloc/chapter/cubit.dart';
 
 import 'Features/pages/splash_screen.dart';
 import 'core/shared/themes.dart';
+import 'injection.dart';
 
 
 
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
- // Bloc.observer = MyBlocObserver();
+  await dependencyInjectionInit();
   await Hive.initFlutter();  await Hive.openBox('app');
   //diohelper.init();
   runApp(MyApp());

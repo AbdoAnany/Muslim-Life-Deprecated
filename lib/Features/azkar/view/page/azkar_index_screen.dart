@@ -1,8 +1,7 @@
 // @dart=2.9
 import 'dart:ui';
 
-import 'package:azkar/Features/bloc/Azkar_cubit/azkar_cubit.dart';
-import 'package:azkar/Features/bloc/Azkar_cubit/azkar_state.dart';
+import 'package:azkar/Features/azkar/view/cubit/azkar_cubit.dart';
 import 'package:azkar/core/providers/app_provider.dart';
 import 'package:azkar/core/shared/colors.dart';
 import 'package:azkar/core/utils/assets.dart';
@@ -130,8 +129,7 @@ class AzkarIndexScreen extends StatelessWidget {
                             itemCount: azkarCubit.Azkarcontroller.text.isEmpty? azkarCubit.azkarCategoriesList.length:
                             azkarCubit.filteredList.length,
                             gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 3,crossAxisSpacing: 3),
+                            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,crossAxisSpacing: 3),
                           )
 
                       ),

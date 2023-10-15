@@ -1,5 +1,4 @@
-import 'package:azkar/Features/bloc/Azkar_cubit/azkar_cubit.dart';
-import 'package:azkar/Features/bloc/Azkar_cubit/azkar_state.dart';
+import 'package:azkar/Features/azkar/view/cubit/azkar_cubit.dart';
 import 'package:azkar/core/providers/app_provider.dart';
 import 'package:azkar/core/shared/colors.dart';
 import 'package:azkar/core/shared/styles.dart';
@@ -39,7 +38,7 @@ class azkarslider extends StatelessWidget {
                           scrollPhysics: BouncingScrollPhysics(),
                           enableInfiniteScroll: false,
                           onPageChanged: (index, reason) {
-                            azkarCubit.onscroll(index);
+                            azkarCubit.onScroll(index);
                           },
                           height: MediaQuery.of(context).size.height,
                           autoPlay: false,

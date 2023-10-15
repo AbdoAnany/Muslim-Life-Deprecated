@@ -1,4 +1,4 @@
-import 'package:azkar/Features/pages/azkar/azkar_index_screen.dart';
+import 'package:azkar/Features/azkar/view/page/azkar_index_screen.dart';
 import 'package:azkar/Features/pages/surah/surah_index_screen.dart';
 import 'package:azkar/core/utils/assets.dart';
 import 'package:azkar/core/widgets/misbaha.dart';

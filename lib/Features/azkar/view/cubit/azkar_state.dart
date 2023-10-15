@@ -1,4 +1,6 @@
 // @dart=2.9
+
+part of 'azkar_cubit.dart';
 abstract class AzkarState  {
 
 }

@@ -1,9 +1,9 @@
 // @dart=2.9
 
-class Azkar {
+class AzkarModel {
   List<AzkarCategory> azkarCategoryList = [];
 
-  Azkar.fromJson(Map<String, dynamic> json) {
+  AzkarModel.fromJson(Map<String, dynamic> json) {
     if (json['Azkar'] != null) {
       azkarCategoryList = [];
       json['Azkar'].forEach((v) {

@@ -29,8 +29,7 @@ class HomeScreen extends StatelessWidget {
         HijriCalendar.setLocal('ar');
         return SafeArea(
           child: Scaffold(
-            body:
-          Directionality(
+            body: Directionality(
             // add this
             textDirection: TextDirection.rtl,
             child: Stack(
@@ -82,8 +81,6 @@ class HomeScreen extends StatelessWidget {
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight,
                                 colors: [
-                                  //  Color(0xfff6c949),
-                                  //   Color(0xffbba939),
                                   Color(0xffb0c168),
                                   Color(0xff57b78f),
                                   Color(0xff0fafaf),
