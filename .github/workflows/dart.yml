@@ -22,5 +22,6 @@ jobs:
         with:
           channel: stable
           flutter-version-file: pubspec.yaml # path to pubspec.yaml
-      - run: flutter --version
-
+      - run: flutter clean
+      - run: flutter pub get
+      - run: flutter build appbundle --release
